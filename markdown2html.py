@@ -3,8 +3,6 @@
 
 import hashlib
 import re
-import os
-import markdown
 from sys import argv
 from sys import exit
 
