@@ -1,7 +1,10 @@
-// 1-color_variable.scss
+/* COLOR VARIABLE */
+$color: #3d3d3d;
 
-$myColor: #3D3D3D;
+body {
+    color: $color;
+}
 
-body, p {
-  color: $myColor;
+p {
+    color: $color;
 }
