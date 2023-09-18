@@ -1,8 +1,9 @@
-/* NESTED HOVER */
-button {
-    color: #ff0000;
+// 6-nested_hover.scss
 
-    &:hover {
-        color: #00ff00;
-    }
+button {
+  color: #FF0000;
+
+  &:hover {
+    color: #00FF00;
+  }
 }
