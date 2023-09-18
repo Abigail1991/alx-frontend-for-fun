@@ -1,0 +1,8 @@
+/* NESTED HOVER */
+button {
+    color: #ff0000;
+
+    &:hover {
+        color: #00ff00;
+    }
+}
