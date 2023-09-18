@@ -1,0 +1,6 @@
+/* LOOP HEADER */
+@for $level from 1 through 5 {
+    h#{$level} {
+        font-size: #{$level}px;
+    }
+}
