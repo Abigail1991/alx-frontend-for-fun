@@ -1,0 +1,125 @@
+* {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.menu {
+    display: block;
+    width: 150px;
+    height: 400px;
+    margin: 50px;
+}
+
+.menu-open {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+.menu-open-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e10b3c;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    transition: transform 0.1s ease;
+    transform: scale(1.4);
+    z-index: 1;
+}
+
+.menu-open-button:hover {
+    transform: scale(1.6);
+    transition: transform 0.1s ease;
+}
+
+input:checked + .menu-open-button {
+    transform: scale(1);
+    transition: transform 0.1s ease;
+}
+
+.menu-open-button .menu-line {
+    position: relative;
+    background: white;
+    display: block;
+    width: 20px;
+    height: 2px;
+}
+
+.menu-line-1,
+.menu-line-2 {
+    margin-bottom: 3px;
+}
+
+input:checked + .menu-open-button .menu-line-1 {
+    transform: translateX(3px) translateY(0px) rotate(45deg);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+    margin-bottom: 7px;
+}
+
+input:checked + .menu-open-button .menu-line-2 {
+    opacity: 0;
+}
+
+input:checked + .menu-open-button .menu-line-3 {
+    transform: translateX(3px) translateY(0px) rotate(-45deg);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+    margin-bottom: 0;
+}
+
+input + .menu-open-button .menu-line {
+    transition: transform 0.2s ease;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e10b3c;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50rem;
+    font-size: 1.2rem;
+    position: absolute;
+    transform: translateY(-70px);
+    margin-top: 10px;
+    z-index: -1;
+    transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+    color: #e10b3c;
+    background-color: white;
+    border: 1px solid #e10b3c;
+    height: 58px;
+    width: 58px;
+}
+
+input:checked ~ .menu-item {
+    z-index: 1;
+}
+
+input:checked ~ .menu-item:nth-of-type(1) {
+    transform: translateY(0px);
+}
+
+input:checked ~ .menu-item:nth-of-type(2) {
+    transform: translateY(calc(1 * 70px));
+}
+
+input:checked ~ .menu-item:nth-of-type(3) {
+    transform: translateY(calc(2 * 70px));
+}
+
+input:checked ~ .menu-item:nth-of-type(4) {
+    transform: translateY(calc(3 * 70px));
+}
+
+input:checked ~ .menu-item:nth-of-type(5) {
+    transform: translateY(calc(4 * 70px));
+}

@@ -1,0 +1,71 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    font-size: 20px;
+}
+
+.toggle-cb {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+.toggle,
+.toggle-label {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-inner {
+    border: 1px solid grey;
+    width: 4.5rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+}
+
+.toggle-inner::after {
+}
+
+.toggle-switch {
+    border: 1px solid grey;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+}
+
+input ~ .toggle-label .toggle-inner {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.1s ease;
+}
+
+input ~ .toggle-label .toggle-inner::after {
+    content: "No";
+    color: grey;
+    padding-left: 2.4rem;
+}
+
+input ~ .toggle-label .toggle-switch {
+    left: -4.6rem;
+    transition: left 0.15s ease;
+}
+
+input:checked ~ .toggle-label .toggle-inner {
+    background-color: #d8003b;
+    transition: background-color 0.1s ease;
+}
+
+input:checked ~ .toggle-label .toggle-inner::after {
+    content: "Yes";
+    color: white;
+    padding-left: 0.7rem;
+}
+
+input:checked ~ .toggle-label .toggle-switch {
+    left: -1.9rem;
+    transition: left 0.15s ease;
+}
